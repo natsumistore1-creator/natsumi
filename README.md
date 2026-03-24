@@ -1,52 +1,16 @@
-# Natsumi Store - Pro Edition (Node.js + SQLite)
+# React + Vite
 
-This is a modern, full-stack E-commerce platform for Natsumi Store.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Pro Setup (Multi-Terminal Workflow)
+Currently, two official plugins are available:
 
-To run the complete application, open **4 Terminals** and run the following commands:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Terminal 1: Backend Server (Node.js + SQLite)
-Handles the API, Database, and Business Logic.
-```bash
-cd backend
-npm start
-```
+## React Compiler
 
-### Terminal 2: Frontend Server (Web UI)
-Serves the user interface.
-```bash
-# Using Python
-python3 -m http.server 8000
-# OR using serve
-npx serve -p 8000
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Terminal 3: Database Explorer & Logs
-Monitor database changes or view logs.
-```bash
-cd backend
-# To see live server logs
-tail -f natsumi.db # (Metadata view)
-# OR monitor network
-watch -n 1 ls -lh natsumi.db
-```
+## Expanding the ESLint configuration
 
-### Terminal 4: Git / Development
-Use this terminal for Git commands, installing new packages, or other CLI tasks.
-```bash
-# Example: Add a new feature branch
-git checkout -b feature/ui-upgrade
-```
-
-## 🛠️ Tech Stack
-- **Frontend**: Vanilla HTML5, CSS3 (Modern Flex/Grid), JavaScript (ES6+).
-- **Backend**: Node.js, Express.js.
-- **Database**: SQLite3 (Persistent storage).
-- **Security**: JWT (Ready for Auth), Bcryptjs.
-
-## 🎨 UI/UX Features
-- **Modern Theme**: Light/Dark mode support.
-- **Side Drawer Cart**: Smoother shopping experience.
-- **SQLite Persistence**: Your data stays after refresh.
-- **Skeleton Loading**: Professional perception of speed.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
